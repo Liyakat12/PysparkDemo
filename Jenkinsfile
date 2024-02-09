@@ -3,14 +3,6 @@ pipeline {
   args "-u jenkins"}
   }
   stages {
-    stage('build') {
-        environment {
-        HOME="."
-        }
-        steps {
-          sh 'mvn --version'
-          }
-   }
     stage("prepare") {
       steps {
         script{
