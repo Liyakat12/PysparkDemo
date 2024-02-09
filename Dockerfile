@@ -8,10 +8,7 @@ LABEL maintainer="soyel.alam@ucdconnect.ie"
 
 RUN apt-get update && \
 	apt-get -y install sudo zip awscli
-
-RUN pip3 install --upgrade pip && \
-    pip3 install pipenv
-
+ 
 WORKDIR /usr/src/app
 
 RUN useradd jenkins -d /usr/src/app && echo "jenkins:jenkins" | chpasswd
