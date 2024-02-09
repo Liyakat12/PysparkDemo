@@ -9,13 +9,13 @@ LABEL maintainer="soyel.alam@ucdconnect.ie"
 RUN apt-get update && \
 	apt-get -y install sudo zip awscli
 
-RUN apt-get install -q -y openjdk-8-jdk && \
-    apt-get install -y python3-pip python3.7
+RUN apt-get install -q -y openjdk-11-jdk && \
+    apt-get install -y python3-pip python3.12
 
 RUN pip3 install --upgrade pip && \
     pip3 install pipenv
 
-ENV JAVA_HOME  /usr/lib/jvm/java-8-openjdk-amd64
+ENV JAVA_HOME  /usr/lib/jvm/java-11-openjdk-amd64
 
 WORKDIR /usr/src/app
 
